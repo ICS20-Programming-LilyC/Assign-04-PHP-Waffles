@@ -55,8 +55,8 @@ function WaffleOrder() {
   $subtotal = $baseWaffleCost + $costOfToppings + $costOfFriedChicken + $costOfBreakfastDrinks;
   $taxes = $subtotal * $HST;
   $total = $subtotal + $taxes;
+}
 
-  // Displaying the total to the user in the "results" div
+  // Displaying the total to the user in the "results" iframe
   echo "Your order is a " . $waffleSize . " waffle. For your waffle, you chose " . $numberOfWaffleToppings . " toppings. You also decided to add " . $numberOfFriedChickenTenders . " fried
-chicken tender(s) to your order, along with " . $numberOfBreakfastDrinks . " beverage(s). Your subtotal is $" . number_format($subtotal,2) . ". The calculated amount of taxes added due to the HST rate is $" . number_format($taxes,2) + ". Which makes your total $" . number_format($total,2) + ". Thanks for your purchase!";
-  ?>
+chicken tender(s) to your order, along with " . $numberOfBreakfastDrinks . " beverage(s). Your subtotal is $" . number_format($subtotal,2) . ". The calculated amount of taxes added due to the HST rate is $" . number_format($taxes,2) + ". Which makes your total $" . number_format($total,2) + ". Thanks for your purchase!"; ?>

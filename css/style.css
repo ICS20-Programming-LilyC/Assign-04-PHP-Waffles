@@ -1,0 +1,53 @@
+/* Created by: Lily C
+* Created on: 04/21/2023
+* This CSS file defines the style for index.php
+* Assign-04-PHP-Waffles
+*/
+body {
+  background-color: antiquewhite;
+  padding-left: 20px; padding-right: 20px;
+}
+
+h1 {
+  background-color: rgb(164 137 113);
+  color: hsl(22deg 19% 36%);
+  padding: 40px;
+  text-align: center;
+}
+
+h3 {
+  color: #fff;
+  padding: 10px;
+}
+
+h4 {
+  color: #594236;
+  padding: 10px;
+}
+
+h6 {
+  color: #0833dd;
+}
+
+p {
+  background-color: #e8c9ab;
+  color: #000;
+  padding: 10px;
+}
+
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  background-color: #937c6c;
+}
+
+form {
+  background-color: #e8c9ab;
+  padding: 10px;
+}
+
+iframe {
+  background-color: #937c6c;
+  color: #342809;
+  padding: 10px;
+}
