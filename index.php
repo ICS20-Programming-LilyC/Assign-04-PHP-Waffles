@@ -80,7 +80,7 @@
    </center>
 
  <!--Form to allow user input-->
-   <form action="./calculations.php">
+   <form action="./calculations.php" method="post" target="results">
      <php echo <h4>Please indicate the size of waffle you would like:</h4>
 
    <!--Multiple choice - picking size of pancake-->
@@ -100,7 +100,7 @@
   <!--First checkbox - Original-->
      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
        <span class="mdl-checkbox__label">Original</span>
-       <input type="checkbox" id="original" name="original"  class="mdl-checkbox__input">
+       <input type="checkbox" id="original" name="checkboxes[]" value="1" class="mdl-checkbox__input">
      </label>
      <br>
      <br>
@@ -108,7 +108,7 @@
  <!--Second checkbox - Cinnamon & sugar-->
      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
        <span class="mdl-checkbox__label">Cinnamon & sugar</span>
-       <input type="checkbox" id="cinnamon-and-sugar" name="cinnamon and sugar"  class="mdl-checkbox__input">
+       <input type="checkbox" id="cinnamon-and-sugar" name="checkboxes[]" value="1" class="mdl-checkbox__input">
      </label>
      <br>
      <br>
@@ -116,7 +116,7 @@
   <!--Third checkbox - Chocolate or nutella drizzle-->
      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
        <span class="mdl-checkbox__label">Chocolate or nutella drizzle</span>
-       <input type="checkbox" id="chocolate-or-nutella-drizzle" name="chocolate or nutella drizzle"  class="mdl-checkbox__input">
+       <input type="checkbox" id="chocolate-or-nutella-drizzle" name="checkboxes[]" value="1"  class="mdl-checkbox__input">
      </label>
      <br>
      <br>
@@ -124,7 +124,7 @@
   <!--Fourth checkbox - Whipped cream and fruit-->
      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
        <span class="mdl-checkbox__label">Whipped cream and fruit</span>
-       <input type="checkbox" id="whipped-cream-and-fruit" name="whipped cream and fruit"  class="mdl-checkbox__input">
+       <input type="checkbox" id="whipped-cream-and-fruit" name="checkboxes[]" value="1" class="mdl-checkbox__input">
      </label>
       <br>
       <br>
@@ -132,7 +132,7 @@
   <!--Fith checkbox - Fried Eggs and bacon-->
      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
        <span class="mdl-checkbox__label">Fried Eggs and bacon</span>
-       <input type="checkbox" id="fried-eggs-and-bacon" name="fried eggs and bacon"  class="mdl-checkbox__input">
+       <input type="checkbox" id="fried-eggs-and-bacon" name="checkboxes[]" value="1" class="mdl-checkbox__input">
      </label>
       <br>
       <br>
