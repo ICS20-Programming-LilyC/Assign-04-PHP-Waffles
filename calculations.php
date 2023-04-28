@@ -25,11 +25,13 @@ if (isset($_POST["amount-drinks"])) {
 if ( isset($_POST["size"])){
 $waffleSize = $_POST["size"];
   }
-  
-  // Using determined value to declare variable for number of toppings chosen
- if(!empty($_POST["checkboxes"])) {
+
+ // Using determined value to declare variable for number of toppings chosen
+if(!empty($_POST["checkboxes"]) && is_array($_POST["checkboxes"])) {
    $numberOfWaffleToppings = count($_POST["checkboxes"]);
- }
+} else {
+   $numberOfWaffleToppings = 0;
+}
 
   // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
   $costOfToppings = $numberOfWaffleToppings * PRICE_WAFFLE_TOPPINGS;
