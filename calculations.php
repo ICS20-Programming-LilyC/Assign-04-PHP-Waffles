@@ -9,8 +9,8 @@
   // Initializing variable for base cost of waffles, which is determined depending on the size of waffle ordered.
   $baseWaffleCost = 0;
   $numberOfWaffleToppings = 0;
-  $numberOfFriedChickenTenders = 0;
-  $numberOfBreakfastDrinks = 0;
+  $numberOfFriedChickenTenders = 3;
+  $numberOfBreakfastDrinks = 3;
 
   // Getting user input for waffle size, number of fried chicken tenders and number of breakfast drinks.
 if ( isset($_POST["size"])){
