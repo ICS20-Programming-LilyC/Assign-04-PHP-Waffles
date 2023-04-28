@@ -9,22 +9,23 @@
   // Initializing variable for base cost of waffles, which is determined depending on the size of waffle ordered.
   $baseWaffleCost = 0;
   $numberOfWaffleToppings = 0;
-  $numberOfFriedChickenTenders = 3;
-  $numberOfBreakfastDrinks = 3;
+  $numberOfFriedChickenTenders = 0;
+  $numberOfBreakfastDrinks = 0;
 
-  // Getting user input for waffle size, number of fried chicken tenders and number of breakfast drinks.
+// Declaring my variables and matching them to my ids in index.php.
+
+if (isset($_POST["fried-chicken-tenders"])) {
+  $numberOfFriedChickenTenders = intval($_POST["fried-chicken-tenders"]);
+}
+
+if (isset($_POST["amount-drinks"])) {
+  $numberOfBreakfastDrinks = intval($_POST["amount-drinks"]);
+}
+
 if ( isset($_POST["size"])){
 $waffleSize = $_POST["size"];
   }
   
-if ( isset($_POST["fried-chicken-tenders"])) {
-  $numberOfFriedChickenTenders = intval($_POST["fried-chicken-tenders"]);
-  }
-
-if ( isset($_POST["amount-drinks"])) {
-  $numberOfBreakfastDrinks = intval($_POST["amount-drinks"]);
-  }
-
   // Using determined value to declare variable for number of toppings chosen
  if(!empty($_POST["checkboxes"])) {
    $numberOfWaffleToppings = count($_POST["checkboxes"]);
@@ -32,6 +33,12 @@ if ( isset($_POST["amount-drinks"])) {
 
   // Determining the cost of the toppings using number of toppings variable and cost of toppings constant
   $costOfToppings = $numberOfWaffleToppings * PRICE_WAFFLE_TOPPINGS;
+
+// If waffle size is not selected, user cannot order just toppings.
+if ($waffleSize == "0") {
+    $numberOfWaffleToppings = 0;
+    $costOfToppings = 0;
+}
   
   // Establishing the base cost of a waffle sizes using compound if statements.
   

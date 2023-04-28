@@ -25,6 +25,7 @@
 
    <!--MDL theme-->
    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" /> 
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 <!--Header-->
 <?php echo "<h1>Waffle Orders with PHP</h1>"; ?>
@@ -175,16 +176,18 @@
      <h4>If you're ordering any of our optional items, then please indicate below the amount of drinks and/or  tenders you would like in your order:</h4>
 
   <!--Input for optional breakfast drink-->
-        <label for="amount-drinks">How many drinks would you like?</label>
-        <input type="number" step="1" min="0" id="amount-drinks" placeholder="Number of drinks...">
-     <br>
-     <br>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+       <input class="mdl-textfield__input" type="number" id="amount-drinks" step="1" value="0" min="0"  name="amount-drinks">
+       <label class="mdl-textfield__label" for="amount-drinks">How many breakfast dinks would you like?</label>
+     </div>
 
   <!--Input for optional fried chicken tenders-->
-        <label for="fried-chicken-tenders">How many fried chicken tenders would you like?</label>
-        <input type="number" step="1" min="0" id="fried-chicken-tenders" placeholder=" Number of fried chicken tenders...">
-     <br>
-     <br>
+       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+       <input class="mdl-textfield__input" type="number" id="fried-chicken-tenders" step="1" value="0" min="0"  name="fried-chicken-tenders">
+       <label class="mdl-textfield__label" for="fried-chicken-tenders">How many fried chicken tenders would you like?</label>
+     </div>
+       <br>
+       <br>
 
   <!--Adding id to submit button to style button-->
      <input type="submit" id="sumbit" value="Submit Your Order" button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
